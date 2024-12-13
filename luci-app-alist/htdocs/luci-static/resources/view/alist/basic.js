@@ -103,6 +103,11 @@ return view.extend({
 		o.default = o.disabled;
 		o.rmempty = false;
 
+		o = s.option(form.Value, 'listen_address', _('Listen address'));
+		o.datatype = 'ipaddr'
+		o.default = '0.0.0.0';
+		o.rmempty = false;
+
 		o = s.option(form.Value, 'port', _('Port'));
 		o.datatype = 'and(port,min(1))';
 		o.default = '5244';

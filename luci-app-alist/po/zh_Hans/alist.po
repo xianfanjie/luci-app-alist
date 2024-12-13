@@ -20,7 +20,7 @@ msgstr "一款支持多种存储的目录文件列表程序。"
 msgid "Setting"
 msgstr "设置"
 
-msgid "Basic Setting"
+msgid "Basic Settings"
 msgstr "基本设置"
 
 msgid "Logs"
@@ -28,6 +28,9 @@ msgstr "日志"
 
 msgid "Enabled"
 msgstr "启用"
+
+msgid "Listen address"
+msgstr "监听地址"
 
 msgid "Port"
 msgstr "端口"

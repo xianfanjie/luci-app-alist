@@ -8,6 +8,7 @@ PROG=/usr/bin/alist
 
 get_config() {
 	config_get_bool enabled $1 enabled 1
+	config_get listen_address $1 listen_address "0.0.0.0"
 	config_get port $1 port 5244
 	config_get allow_wan $1 allow_wan 0
 	config_get delayed_start $1 delayed_start 0
@@ -140,7 +141,7 @@ start_service() {
 
 	# scheme
 	json_add_object "scheme"
-		json_add_string "address" "0.0.0.0"
+		json_add_string "address" "$listen_address"
 		json_add_int "http_port" "$http_port"
 		json_add_int "https_port" "$https_port"
 		json_add_boolean "force_https" "$force_https"
